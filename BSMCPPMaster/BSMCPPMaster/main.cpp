@@ -1,4 +1,31 @@
 #include <atmel_start.h>
+#include "..\knx_lib\KNX.h"
+
+class atmel_knx: public knx_base
+{
+	// 	public:
+	// 	void device_init();
+	// 	void timer_init();
+	// 	void com_init();
+	// 	void TXchar(char);
+	// 	void wait(uint16_t);
+	// 	void writeToMemory(uint16_t startAdd, void *buffer, uint16_t size);
+	// 	void readFromMemory(uint16_t startAdd, void *buffer, uint16_t size);
+	// 	int GroupAddIsExistent(uint16_t group_add);
+	// 	uint16_t getFirstGroupAddressofObj(uint8_t object_index);
+	// 	void writeObjects(uint16_t group_address, uint8_t* value,knx_ObjectBase*);
+	// 	uint16_t getIndAddress();
+	// 	void setIndAddress(uint16_t);
+	//
+	// 	knx_ObjectBase* getObject(int index);
+};
+
+atmel_knx knx;
+
+void USART_onRX(char c)
+{
+	knx.on_RXchar(c);
+}
 
 static void tx_cb_serial_knx(const struct usart_async_descriptor *const io_descr)
 {
@@ -11,6 +38,7 @@ static void rx_cb_serial_knx(const struct usart_async_descriptor *const io_descr
 {
 	uint8_t ch, count;
 	count = io_read(&serial_knx.io, &ch, 1);
+	USART_onRX(ch);
 	knx_testArray[knx_ptr] = ch;
 	knx_ptr++;
 	if (knx_ptr == 9)

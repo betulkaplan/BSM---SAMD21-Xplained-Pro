@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "BSMCPPMaster", "BSMCPPMaster\BSMCPPMaster.cppproj", "{DCE6C7E3-EE26-4D79-826B-08594B9AD897}"
 EndProject
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "knx_lib", "knx_lib\knx_lib.cppproj", "{5D5BC6D8-A526-44DE-B6F0-17BDC75AA7AC}"
+EndProject
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "bsm_protocol", "bsm_protocol\bsm_protocol.cppproj", "{321E1C74-1151-4DFB-A26E-C74BF850A70E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -15,6 +19,14 @@ Global
 		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Debug|ARM.Build.0 = Debug|ARM
 		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Release|ARM.ActiveCfg = Release|ARM
 		{DCE6C7E3-EE26-4D79-826B-08594B9AD897}.Release|ARM.Build.0 = Release|ARM
+		{5D5BC6D8-A526-44DE-B6F0-17BDC75AA7AC}.Debug|ARM.ActiveCfg = Debug|ARM
+		{5D5BC6D8-A526-44DE-B6F0-17BDC75AA7AC}.Debug|ARM.Build.0 = Debug|ARM
+		{5D5BC6D8-A526-44DE-B6F0-17BDC75AA7AC}.Release|ARM.ActiveCfg = Release|ARM
+		{5D5BC6D8-A526-44DE-B6F0-17BDC75AA7AC}.Release|ARM.Build.0 = Release|ARM
+		{321E1C74-1151-4DFB-A26E-C74BF850A70E}.Debug|ARM.ActiveCfg = Debug|ARM
+		{321E1C74-1151-4DFB-A26E-C74BF850A70E}.Debug|ARM.Build.0 = Debug|ARM
+		{321E1C74-1151-4DFB-A26E-C74BF850A70E}.Release|ARM.ActiveCfg = Release|ARM
+		{321E1C74-1151-4DFB-A26E-C74BF850A70E}.Release|ARM.Build.0 = Release|ARM
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

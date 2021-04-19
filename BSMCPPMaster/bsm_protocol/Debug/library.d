@@ -1,7 +1,6 @@
-main.d main.o: .././main.c ../atmel_start.h ../driver_init.h \
- ../atmel_start_pins.h ../hal/include/hal_gpio.h \
- ../hal/include/hpl_gpio.h ../hal/utils/include/compiler.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.3.1\include\stddef.h \
+library.d library.o: .././library.cpp \
+ C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.3.395\samd21a\include/sam.h \
+ C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.3.395\samd21a\include/samd21j18a.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.3.1\include\stdint.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdint.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\machine\_default_types.h \
@@ -9,10 +8,6 @@ main.d main.o: .././main.c ../atmel_start.h ../driver_init.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\_newlib_version.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\_intsup.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\_stdint.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.3.1\include\stdbool.h \
- ../hal/utils/include/parts.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.3.395\samd21a\include/samd21.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.3.395\samd21a\include/samd21j18a.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\arm\CMSIS\5.4.0\CMSIS\Core\Include/core_cm0plus.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\arm\CMSIS\5.4.0\CMSIS\Core\Include/cmsis_version.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\arm\CMSIS\5.4.0\CMSIS\Core\Include/cmsis_compiler.h \
@@ -76,45 +71,11 @@ main.d main.o: .././main.c ../atmel_start.h ../driver_init.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.3.395\samd21a\include/instance/tcc2.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.3.395\samd21a\include/instance/usb.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.3.395\samd21a\include/instance/wdt.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.3.395\samd21a\include/pio/samd21j18a.h \
- ../hri/hri_d21.h \
- C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.3.395\samd21a\include/sam.h \
- ../hri/hri_ac_d21.h ../hal/include/hal_atomic.h ../hri/hri_adc_d21.h \
- ../hri/hri_dac_d21.h ../hri/hri_dmac_d21.h ../hri/hri_dsu_d21.h \
- ../hri/hri_eic_d21.h ../hri/hri_evsys_d21.h ../hri/hri_gclk_d21.h \
- ../hri/hri_hmatrixb_d21.h ../hri/hri_i2s_d21.h ../hri/hri_mtb_d21.h \
- ../hri/hri_nvic_d21.h ../hri/hri_nvmctrl_d21.h ../hri/hri_pac_d21.h \
- ../hri/hri_pm_d21.h ../hri/hri_port_d21.h ../hri/hri_rtc_d21.h \
- ../hri/hri_sercom_d21.h ../hri/hri_sysctrl_d21.h \
- ../hri/hri_systemcontrol_d21.h ../hri/hri_systick_d21.h \
- ../hri/hri_tc_d21.h ../hri/hri_tcc_d21.h ../hri/hri_usb_d21.h \
- ../hri/hri_wdt_d21.h ../hal/utils/include/err_codes.h \
- ../hpl/port/hpl_gpio_base.h ../hal/utils/include/utils_assert.h \
- ../hal/include/hal_delay.h ../hal/include/hpl_irq.h \
- ../hal/include/hpl_reset.h ../hal/include/hpl_sleep.h \
- ../hal/include/hal_init.h ../hal/include/hpl_init.h \
- ../hal/include/hal_io.h ../hal/include/hal_sleep.h \
- ../hal/include/hal_flash.h ../hal/include/hpl_flash.h \
- ../hal/include/hpl_irq.h ../hal/include/hal_usart_async.h \
- ../hal/include/hal_io.h ../hal/include/hpl_usart_async.h \
- ../hal/include/hpl_usart.h ../hal/utils/include/utils_ringbuffer.h \
- ../hal/utils/include/compiler.h ../hal/utils/include/utils_assert.h \
- ../hal/include/hal_timer.h ../hal/utils/include/utils_list.h \
- ../hal/include/hpl_timer.h ../hal/utils/include/utils.h
+ C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.3.395\samd21a\include/pio/samd21j18a.h
 
-../atmel_start.h:
+C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.3.395\samd21a\include/sam.h:
 
-../driver_init.h:
-
-../atmel_start_pins.h:
-
-../hal/include/hal_gpio.h:
-
-../hal/include/hpl_gpio.h:
-
-../hal/utils/include/compiler.h:
-
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.3.1\include\stddef.h:
+C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.3.395\samd21a\include/samd21j18a.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.3.1\include\stdint.h:
 
@@ -129,14 +90,6 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\_intsup.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\_stdint.h:
-
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\6.3.1\include\stdbool.h:
-
-../hal/utils/include/parts.h:
-
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.3.395\samd21a\include/samd21.h:
-
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.3.395\samd21a\include/samd21j18a.h:
 
 C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\arm\CMSIS\5.4.0\CMSIS\Core\Include/core_cm0plus.h:
 
@@ -265,109 +218,3 @@ C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.3.395\samd21a
 C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.3.395\samd21a\include/instance/wdt.h:
 
 C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.3.395\samd21a\include/pio/samd21j18a.h:
-
-../hri/hri_d21.h:
-
-C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.3.395\samd21a\include/sam.h:
-
-../hri/hri_ac_d21.h:
-
-../hal/include/hal_atomic.h:
-
-../hri/hri_adc_d21.h:
-
-../hri/hri_dac_d21.h:
-
-../hri/hri_dmac_d21.h:
-
-../hri/hri_dsu_d21.h:
-
-../hri/hri_eic_d21.h:
-
-../hri/hri_evsys_d21.h:
-
-../hri/hri_gclk_d21.h:
-
-../hri/hri_hmatrixb_d21.h:
-
-../hri/hri_i2s_d21.h:
-
-../hri/hri_mtb_d21.h:
-
-../hri/hri_nvic_d21.h:
-
-../hri/hri_nvmctrl_d21.h:
-
-../hri/hri_pac_d21.h:
-
-../hri/hri_pm_d21.h:
-
-../hri/hri_port_d21.h:
-
-../hri/hri_rtc_d21.h:
-
-../hri/hri_sercom_d21.h:
-
-../hri/hri_sysctrl_d21.h:
-
-../hri/hri_systemcontrol_d21.h:
-
-../hri/hri_systick_d21.h:
-
-../hri/hri_tc_d21.h:
-
-../hri/hri_tcc_d21.h:
-
-../hri/hri_usb_d21.h:
-
-../hri/hri_wdt_d21.h:
-
-../hal/utils/include/err_codes.h:
-
-../hpl/port/hpl_gpio_base.h:
-
-../hal/utils/include/utils_assert.h:
-
-../hal/include/hal_delay.h:
-
-../hal/include/hpl_irq.h:
-
-../hal/include/hpl_reset.h:
-
-../hal/include/hpl_sleep.h:
-
-../hal/include/hal_init.h:
-
-../hal/include/hpl_init.h:
-
-../hal/include/hal_io.h:
-
-../hal/include/hal_sleep.h:
-
-../hal/include/hal_flash.h:
-
-../hal/include/hpl_flash.h:
-
-../hal/include/hpl_irq.h:
-
-../hal/include/hal_usart_async.h:
-
-../hal/include/hal_io.h:
-
-../hal/include/hpl_usart_async.h:
-
-../hal/include/hpl_usart.h:
-
-../hal/utils/include/utils_ringbuffer.h:
-
-../hal/utils/include/compiler.h:
-
-../hal/utils/include/utils_assert.h:
-
-../hal/include/hal_timer.h:
-
-../hal/utils/include/utils_list.h:
-
-../hal/include/hpl_timer.h:
-
-../hal/utils/include/utils.h:

@@ -101,7 +101,7 @@ examples/driver_examples.d examples/driver_examples.o: \
  ../hal/include/hpl_usart.h ../hal/utils/include/utils_ringbuffer.h \
  ../hal/utils/include/compiler.h ../hal/utils/include/utils_assert.h \
  ../hal/include/hal_timer.h ../hal/utils/include/utils_list.h \
- ../hal/include/hpl_timer.h ../hal/utils/include/utils.h
+ ../hal/include/hpl_timer.h
 
 ../examples/driver_examples.h:
 
@@ -370,5 +370,3 @@ C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.3.395\samd21a
 ../hal/utils/include/utils_list.h:
 
 ../hal/include/hpl_timer.h:
-
-../hal/utils/include/utils.h:

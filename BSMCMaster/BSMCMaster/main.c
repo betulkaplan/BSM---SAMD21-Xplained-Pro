@@ -91,8 +91,37 @@ void TIMER_Init(void)
 	timer_start(&TIMER);
 }
 
+#include "utils.h"
+
+static uint8_t src_data[128];
+static uint8_t chk_data[128];
 
 
+void FLASH_example(void)
+{
+	uint32_t page_size;
+	uint16_t i;
+
+	/* Init source data */
+	page_size = flash_get_page_size(&FLASH);
+
+	for (i = 0; i < 128; i++) {
+		src_data[i] = 0xaa;
+	}
+	//src_data[0]=0x17;
+
+	/* Write data to flash */
+	flash_write(&FLASH, 0x3200, src_data, 128);
+	
+	uint8_t dum[4] = {0x17, 0x52, 0x98, 0x13};
+	flash_write(&FLASH, 0x3201, dum, 4);
+	dum[3] = 0x33;
+	flash_write(&FLASH, 0x3201, dum, 4);
+	
+	
+	/* Read data from flash */
+	flash_read(&FLASH, 0x3200, chk_data, 128);
+}
 
 int main(void)
 {
@@ -101,7 +130,9 @@ int main(void)
 	serial_knx_Init();
 	serial_bsm_Init();
 	TIMER_Init();
-
+	FLASH_example();
+	
+	
 	/* Replace with your application code */
 	while (1) {
 	}

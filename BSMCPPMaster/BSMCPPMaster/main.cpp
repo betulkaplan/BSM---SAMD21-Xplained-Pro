@@ -3,14 +3,14 @@
 
 class atmel_knx: public knx_base
 {
-	// 	public:
+	 	public:
 	// 	void device_init();
 	// 	void timer_init();
 	// 	void com_init();
 	// 	void TXchar(char);
 	// 	void wait(uint16_t);
-	// 	void writeToMemory(uint16_t startAdd, void *buffer, uint16_t size);
-	// 	void readFromMemory(uint16_t startAdd, void *buffer, uint16_t size);
+		void writeToMemory(uint16_t startAdd, uint8_t *buffer, uint16_t size);
+		void readFromMemory(uint16_t startAdd, void *buffer, uint16_t size);
 	// 	int GroupAddIsExistent(uint16_t group_add);
 	// 	uint16_t getFirstGroupAddressofObj(uint8_t object_index);
 	// 	void writeObjects(uint16_t group_address, uint8_t* value,knx_ObjectBase*);
@@ -21,6 +21,22 @@ class atmel_knx: public knx_base
 };
 
 atmel_knx knx;
+
+void atmel_knx::writeToMemory(uint16_t startAdd, uint8_t *buffer, uint16_t size)
+{
+
+	/*uint16_t xstartAdd = convert_eepromAdd(startAdd);
+	if (startAdd == 0) return; */
+	flash_write(&FLASH, startAdd, buffer, size);
+	//eeprom_write_block(buffer, (void *)xstartAdd, size);
+	
+}
+void atmel_knx::readFromMemory(uint16_t startAdd, void *buffer, uint16_t size)
+{
+	/*uint16_t xstartAdd = convert_eepromAdd(startAdd);
+	if (startAdd == 0) return;
+	eeprom_read_block(buffer, (void *)xstartAdd, size);*/
+}
 
 void USART_onRX(char c)
 {
@@ -129,6 +145,34 @@ int main(void)
 	serial_knx_Init();
 	serial_bsm_Init();
 	TIMER_Init();
+	
+	uint8_t dumBuff[7];
+	for (int i=0; i<7; i++)
+	{
+		dumBuff[i]=0x9;
+	}
+	knx.writeToMemory(0x5600, dumBuff, 7);
+	
+	uint8_t dumBuff2[1] = {0x22};
+	
+	knx.writeToMemory(0x5603, dumBuff2, 1);
+	
+	
+	
+	/***************************************/
+	static uint8_t src_data[128];
+	uint32_t page_size;
+	uint16_t i;
+
+	/* Init source data */
+	page_size = flash_get_page_size(&FLASH);
+
+	for (i = 0; i < page_size; i++) {
+		src_data[i] = i;
+	}
+
+	/* Write data to flash */
+	//flash_write(&FLASH, 0x5600, src_data, page_size);
 
 	/* Replace with your application code */
 	while (1) {
